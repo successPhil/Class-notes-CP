@@ -1,0 +1,221 @@
+<!-- <h1></h1> is a heading tag, 1-6 where 1 is largest and 6 is smallest by default-->
+<!-- The <em></em> tag allows us to 'emphasize' text wrapped within the tags-->
+
+<!-- 
+<h1>Hello World</h1>
+<em>content</em> -->
+
+<!-- Elements are often setup in a nested form where the outer element is the parent
+and the 'nested' inner elements are the children.
+Below is an example of a parent div element with a child h1 element-->
+
+<!-- 
+<div>
+    <h1>This is a heading</h1>
+</div> -->
+
+
+<!-- This bdo tag stands for bi-directional override
+The attribute dir is set to 'rtl' (right to left)
+The result is the html will be rendered from right to left within the tag
+This would be a way to 'reverse a string' using html-->
+
+<!--<bdo dir="rtl">uoy htiw eb ecrof eht yam</bdo>-->
+
+ 
+ <!-- CSS CASCADING STYLE SHEETS-->
+
+<!--Example of an inline style (styling within the line the tag is in)
+You usually want to avoid this, extremely hard to override. Reference Specificity:
+Inline: 1000 points of specificity
+ID selectors: 100 points of specificity
+Class selectors: 10 points of specificity
+Element Selectors: 1 point of specificity
+
+When resolving conflicting styles, the selector with the higher specificity value takes precedence
+over those with lower values. If multiple selectors have the same specificity
+the last one defined in the stylesheet will be applied.
+
+It's important to note that specificity points are cumulative when multiple selectors are combined. 
+
+For example, if you have an element targeted with both an ID selector and a class selector
+the specificity would be 110 (100 for the ID + 10 for the class).-->
+
+<!--Inline styling example-->
+
+ <!-- <html>
+    <head>
+    </head>
+    <body>
+      <p style="color: red;">Paragraph</p>
+    </body>
+  </html> -->
+ 
+<!--1000 points of specificity, very hard to override-->
+
+<!--Internal styling example:
+Similar to using a external style sheet and linking it
+This example targets the <p> element-->
+ 
+<!-- <html>
+  <head>
+    <style>
+    p { color: red; }
+    </style>
+  </head>
+  <body>
+    <p>Paragraph</p>
+  </body>
+</html> -->
+
+<!--1 point of specificity, very easy to override-->
+
+<!--External style sheet (using a link)
+By using a <link> we can access our styling from outside of our html
+This allows the html to be more readable and the styling sheet can be
+referenced for anything related to the style of our content-->
+
+<!--Our href is the name of the file that contains our styling-->
+<!-- <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <p>Paragraph</p>
+  </body>
+</html> -->
+
+<!--Looking at our style sheet, we again are targeting an element <p>
+    So the above styling will also have 1 point of specificity-->
+
+<!--Basic Structure of CSS
+selector { property: value }
+
+Let's say I wanted to center some text on a line
+
+<h5>Text</h5>
+
+Apply CSS <h5 style="text-align: center;">Text</h5>
+In this case, the h5 is the selector, text-align is the property, and center is the value.
+
+Look at styles.css to see how this was applied-->
+<!-- 
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <p>Paragraph</p>
+    <h5> Some text to be centered</h5>
+  </body>
+</html> -->
+
+<!-- BOX MODEL
+Check out the boxmodel.png or boxmodel2 for visuals
+
+Margin: The margin is the space outside the border. It creates the spacing between elements on the page.
+Margins can be set using CSS properties like 
+margin-top, margin-right, margin-bottom, and margin-left.
+
+Border: The border surrounds the padding area and separates it from the margin. 
+It can be styled and given a specific width using CSS properties like 
+border-width, border-style, and border-color.
+
+Padding: The padding is the space between the content area and the border.
+It provides visual spacing inside the element. Padding can be set using CSS properties like 
+padding-top, padding-right, padding-bottom, and padding-left.
+
+Content: The content area represents the actual content of the element, such as text, images, or other HTML elements. 
+It is the innermost part of the box and is enclosed by padding, border, and margin.
+-->
+
+
+<!--Internal Styling-->
+
+
+<!-- <style>
+    div {
+      border: 6px solid #949599;
+      height: 200px;
+      margin: 20px;
+      padding: 20px;
+      width: 200px;
+    }
+  </style>
+  <div>Hello</div> -->
+
+  <!--CSS property breakdown:
+border: 6px solid #949599;: 
+This line sets the border properties of the <div> element. 
+It assigns a solid border of 6 pixels in width with the color #949599. 
+The border property affects the appearance of the border around the content area.
+
+height: 200px;: 
+This line sets the height of the <div> element to 200 pixels.
+The height property determines the height of the content area of the element, excluding padding, border, and margin.
+
+margin: 20px;: This line sets a margin of 20 pixels on all sides of the <div> element. 
+The margin property defines the space outside the border. 
+In this case, it creates a space of 20 pixels around the entire element.
+
+padding: 20px;: 
+This line sets a padding of 20 pixels on all sides of the <div> element. 
+The padding property defines the space between the content and the border. 
+In this case, it adds a 20-pixel space between the content and the border.
+
+width: 200px;: 
+This line sets the width of the <div> element to 200 pixels. 
+The width property determines the width of the content area of the element
+excluding padding, border, and margin.-->
+
+<!--External Styling (See styles.css)-->
+
+<!-- <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div>Hello</div>
+  </body>
+</html> -->
+
+
+<!-- Boiler plate: To create quick starter code in VS Code you can
+Simply type "!" and press Tab once and it should generate a generic HTML boilerplate
+That will include DOCTYPE html, a head, some meta tags, title, and a body to quickly get you started -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Platoon!</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    
+</body>
+</html> -->
+
+<!--Some General format info-->
+
+<!-- 
+All HTML documents start with a Doctype declaration.
+This let's the browser know everything that follows is part of an HTML document. 
+Doctype always sits at the top and it does not have a closing tag.
+
+Next comes our html tag. This wraps around the entire document. Notice the closing html tag at the very bottom. 
+It's common in HTML to nest tags within tags. We'll be seeing this a lot.
+
+The next tag is the head tag.
+The head of the html document contains all the links and meta data the page needs. 
+Nothing in the head tag will appear on the final page. 
+Some things that can go in the head include: links to style sheets, meta tags that provide data for screen readers or for SEO.
+The title tag in the head is what gets displayed in the browser tab.
+
+After the head tag comes the body. This is the meat of the document.
+Everything nested inside the body tag is what will show up on the actual page.
+In this case it's just our <h1> from before. -->
+

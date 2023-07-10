@@ -1,0 +1,15 @@
+p {
+ color: red; 
+}
+
+h5 {
+    text-align: center
+}
+
+div {
+    border: 6px solid #949599;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+  }
