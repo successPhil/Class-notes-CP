@@ -1,0 +1,56 @@
+<!--First example of 'grabbing an html element'
+See app.js for code used to do this -->
+
+<!-- <!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="app.js" async defer></script>
+  </head>
+  <body>
+    <h1 class="title">Basic DOM Manipulation</h1>
+    <h2>with JavaScript</h2>
+    <button id='alert-button' >Alert Me!</button>
+
+  </body>
+</html> -->
+
+
+
+
+
+
+
+<!--DOM exercise for creating a webpage with 3 images
+Implementing a script to find any images and replace them with the text that their alt attribute contains
+See app.js (example2) for code/comments
+-->
+<!--Script goes in the <head> and src is the file name-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Replace Exercise</title>
+    <script src="app.js" async defer></script> 
+</head>
+<body>
+    <h1>Learning about IMG, Alt and DOM</h1>
+    <img src="player_bird_img.png" alt="A cool bird">
+    <p>This is the first image</p>
+    <img src="blue_ball_img.png" alt="A blue ball with red border">
+    <p>This is the second image</p>
+    <img src="red_ball_img.png" alt="A red ball">
+    <p>This is the third image</p>
+
+    <button onclick="showAltText()">Replace IMG with text</button>
+</body>
+</html>
+<!--onclick tells us which function we will call when the button is clicked
+     (need to define it in the file your script refers to)-->
+<!--Look at the app.js in this file and you will see other functions that can be used
+One is an example that does not work. See if you understand why-->
